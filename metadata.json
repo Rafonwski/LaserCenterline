@@ -1,0 +1,5 @@
+{
+  "name": "LaserCenterline - Image to Single-Path SVG",
+  "description": "A professional-grade tool for laser engraving that converts raster images into single-line SVG paths using skeletonization, eliminating double lines in LightBurn.",
+  "requestFramePermissions": []
+}
