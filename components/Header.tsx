@@ -16,13 +16,7 @@ const Header: React.FC = () => {
             <p className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Pro SVG Optimization</p>
           </div>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
-          <a href="#" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Guida</a>
-          <a href="#" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Compatibilità</a>
-          <button className="px-4 py-2 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-slate-800 transition-all shadow-sm">
-            Dona
-          </button>
-        </nav>
+        {/* Navigation items removed as requested */}
       </div>
     </header>
   );
