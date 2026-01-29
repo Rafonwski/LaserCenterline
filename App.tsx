@@ -17,8 +17,8 @@ const App: React.FC = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    if (!['image/png', 'image/jpeg', 'image/jpg'].includes(file.type)) {
-      setError('Formato non supportato. Carica PNG o JPG.');
+    if (!['image/png', 'image/jpeg', 'image/jpg', 'image/webp'].includes(file.type)) {
+      setError('Formato non supportato. Carica PNG, JPG o WEBP.');
       return;
     }
 
@@ -117,12 +117,12 @@ const App: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                   </svg>
                   <p className="text-slate-900 font-bold mb-1">Trascina qui la tua immagine</p>
-                  <p className="text-slate-500 text-xs">PNG o JPG (Disegno al tratto, max 10MB)</p>
+                  <p className="text-slate-500 text-xs">PNG, JPG o WEBP (Disegno al tratto, max 10MB)</p>
                   <input 
                     type="file" 
                     ref={fileInputRef} 
                     className="hidden" 
-                    accept=".png,.jpg,.jpeg" 
+                    accept=".png,.jpg,.jpeg,.webp" 
                     onChange={handleFileChange}
                   />
                 </div>
@@ -193,6 +193,7 @@ const App: React.FC = () => {
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
                      <span className="px-2 py-1 bg-green-500 text-white text-[10px] font-bold rounded">PATH SINGOLI OK</span>
+                     <span className="px-2 py-1 bg-indigo-500 text-white text-[10px] font-bold rounded">CHIUSURA CONTORNO ATTIVA</span>
                   </div>
                 </div>
 
@@ -265,7 +266,7 @@ const App: React.FC = () => {
             <div className="p-8 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582-4-8 4s-8-1.79-8-4" />
                 </svg>
               </div>
               <h4 className="font-black text-xl mb-4 text-slate-900">Zero Configurazione</h4>
